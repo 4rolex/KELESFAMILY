@@ -1,0 +1,953 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="KELEŞ - FiveM'in en güçlü ekibi. Ailemize katıl ve efsaneye dönüş!">
+    <meta name="keywords" content="FiveM, KELEŞ, roleplay, gaming, ekip, team">
+    <title>KELEŞ | FiveM Ekibi</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Orbitron:wght@700;900&family=Rajdhani:wght@600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <!-- Scroll Progress Bar -->
+    <div id="scrollProgress"></div>
+
+    <!-- Pre-loader -->
+    <div id="preloader">
+        <div class="loader-content">
+            <img src="keles_logo_new.png" alt="Loading..." class="loader-logo">
+            <div class="loader-bar"></div>
+            <p class="loader-text">YÜKLENİYOR...</p>
+        </div>
+    </div>
+
+    <!-- Custom Cursor -->
+    <div id="custom-cursor"></div>
+    <div id="cursor-follower"></div>
+
+    <!-- Announcement Banner -->
+    <div id="announcementBanner" class="announcement-banner">
+        <div class="announcement-inner">
+            <i class="fas fa-bullhorn announcement-icon"></i>
+            <span class="announcement-text">🏆 KAZANAN KELEŞ — ANADOLUXKELES sunucu duyurusu! &nbsp;|&nbsp; 🎉 Yeni üye
+                alımları başladı! &nbsp;|&nbsp; ⚔️ Operasyonlar devam ediyor! &nbsp;|&nbsp; 🏆 KAZANAN KELEŞ —
+                ANADOLUXKELES sunucu duyurusu!</span>
+        </div>
+        <button class="announcement-close" id="bannerClose"><i class="fas fa-times"></i></button>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="nav-logo">
+                <img src="keles_logo_new.png" alt="KELEŞ" class="nav-logo-img">
+                KELEŞ
+            </a>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link active">Ana Sayfa</a></li>
+                <li><a href="#about" class="nav-link">Hakkımızda</a></li>
+                <li><a href="#announcements" class="nav-link">Duyurular</a></li>
+                <li><a href="#rules" class="nav-link">Kurallar</a></li>
+                <li><a href="#team" class="nav-link">Ekip</a></li>
+                <li><a href="#discord" class="nav-link">Discord</a></li>
+                <li><a href="#gallery" class="nav-link">Galeri</a></li>
+                <li><a href="#download" class="nav-link nav-link-highlight">İndir</a></li>
+            </ul>
+            <button class="nav-toggle" id="navToggle" aria-label="Menü">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-particles" id="heroParticles"></div>
+        <div class="hero-content">
+            <div class="hero-badge">
+                <i class="fas fa-fire"></i>
+                FiveM'in En Güçlü Ailesi
+            </div>
+            <img src="keles_logo_new.png" alt="KELEŞ Logo" class="hero-logo">
+            <h1 class="hero-title">KELEŞ</h1>
+            <p class="hero-subtitle">
+                <span id="typingText">Güç · Sadakat · Kardeşlik</span><span class="typing-cursor">|</span>
+            </p>
+            <div class="hero-live-badge">
+                <span class="live-dot"></span>
+                <span id="liveCount">47</span> üye şu an aktif
+            </div>
+            <div class="hero-buttons">
+                <a href="#discord" class="btn btn-primary">
+                    <i class="fab fa-discord"></i> Aileye Katıl
+                </a>
+                <a href="#about" class="btn btn-outline">
+                    <i class="fas fa-info-circle"></i> Hakkımızda
+                </a>
+            </div>
+            <div class="hero-scroll-hint">
+                <span>Aşağı Kaydır</span>
+                <i class="fas fa-chevron-down"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section about">
+        <div class="container">
+            <h2 class="section-title">Hakkımızda</h2>
+            <div class="about-grid">
+                <div class="about-content">
+                    <div class="about-tag">
+                        <i class="fas fa-users"></i> Kim Biz?
+                    </div>
+                    <p class="about-text">
+                        KELEŞ, FiveM dünyasında güç, sadakat ve kardeşliğin simgesidir.
+                        Biz sadece bir ekip değil, bir aileyiz. Her üyemiz, KELEŞ ailesinin
+                        bir parçası olarak sokaklarda saygı görür ve güçlü bir kardeşlik bağıyla birbirine bağlıdır.
+                    </p>
+                    <p class="about-text">
+                        Roleplay dünyasında iz bırakmak, efsaneler yaratmak ve unutulmaz anılar biriktirmek için
+                        bir araya geldik. KELEŞ bayrağı altında, her gün yeni maceralara atılıyor ve
+                        FiveM sunucularında adımızı duyuruyoruz.
+                    </p>
+                    <a href="#discord" class="btn btn-primary mt-2">
+                        <i class="fab fa-discord"></i> Bize Katıl
+                    </a>
+                </div>
+                <div class="about-visual">
+                    <div class="about-img-wrapper">
+                        <img src="İmages/img31_forma.png" alt="KELEŞ Ekip Formaları" class="about-img">
+                        <div class="about-img-glow"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat-card card">
+                    <div class="stat-icon"><i class="fas fa-users"></i></div>
+                    <span class="stat-number" data-target="50">0</span>
+                    <span class="stat-suffix">+</span>
+                    <span class="stat-label">Aktif Üye</span>
+                </div>
+                <div class="stat-card card">
+                    <div class="stat-icon"><i class="fas fa-crosshairs"></i></div>
+                    <span class="stat-number" data-target="100">0</span>
+                    <span class="stat-suffix">+</span>
+                    <span class="stat-label">Başarılı Operasyon</span>
+                </div>
+                <div class="stat-card card">
+                    <div class="stat-icon"><i class="fas fa-clock"></i></div>
+                    <span class="stat-number" data-target="24">0</span>
+                    <span class="stat-suffix">/7</span>
+                    <span class="stat-label">Aktif</span>
+                </div>
+                <div class="stat-card card">
+                    <div class="stat-icon"><i class="fas fa-trophy"></i></div>
+                    <span class="stat-number" data-target="1">0</span>
+                    <span class="stat-suffix">#</span>
+                    <span class="stat-label">FiveM Ailesi</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Announcements Section -->
+    <section id="announcements" class="section announcements">
+        <div class="container">
+            <h2 class="section-title">Duyurular</h2>
+            <p class="section-subtitle">KELEŞ ailesinin son haberleri ve etkinlikleri</p>
+
+            <div class="announcements-grid">
+                <!-- Pinned Announcement -->
+                <div class="announcement-card card pinned">
+                    <div class="announcement-card-badge pinned-badge">
+                        <i class="fas fa-thumbtack"></i> SABİTLENDİ
+                    </div>
+                    <div class="announcement-card-header">
+                        <div class="announcement-card-icon win">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                        <div>
+                            <h3 class="announcement-card-title">KAZANAN KELEŞ!</h3>
+                            <span class="announcement-card-date"><i class="far fa-calendar"></i> 2026 ·
+                                ANADOLUXKELES</span>
+                        </div>
+                    </div>
+                    <p class="announcement-card-text">
+                        ANADOLUXKELES sunucusunda büyük zafer! KELEŞ ailesi olarak rakiplerimize karşı
+                        ezici bir üstünlük kurduk. Tüm katılımcı kardeşlerimize teşekkürler!
+                    </p>
+                    <div class="announcement-card-img-wrap">
+                        <img src="İmages/img28_banner.png" alt="KAZANAN KELEŞ Duyuru" class="announcement-card-img"
+                            onerror="this.style.display='none'">
+                    </div>
+                    <div class="announcement-tags">
+                        <span class="tag tag-gold"><i class="fas fa-star"></i> Zafer</span>
+                        <span class="tag tag-red"><i class="fas fa-fire"></i> Öne Çıkan</span>
+                    </div>
+                </div>
+
+                <!-- Group Photo -->
+                <div class="announcement-card card">
+                    <div class="announcement-card-header">
+                        <div class="announcement-card-icon team">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div>
+                            <h3 class="announcement-card-title">Ekip Toplantısı</h3>
+                            <span class="announcement-card-date"><i class="far fa-calendar"></i> 2026 · WELLSO
+                                Sahası</span>
+                        </div>
+                    </div>
+                    <p class="announcement-card-text">
+                        Tüm ekip bir araya geldi! WELLSO sahasında gerçekleştirilen bu toplantıda
+                        yeni operasyon planları yapıldı ve aile bağları güçlendirildi.
+                    </p>
+                    <div class="announcement-card-img-wrap">
+                        <img src="İmages/img33_ekip_toplanti.jpg" alt="Ekip Toplantısı" class="announcement-card-img"
+                            onerror="this.style.display='none'">
+                    </div>
+                    <div class="announcement-tags">
+                        <span class="tag tag-blue"><i class="fas fa-users"></i> Ekip</span>
+                    </div>
+                </div>
+
+                <!-- Car Meet -->
+                <div class="announcement-card card">
+                    <div class="announcement-card-header">
+                        <div class="announcement-card-icon car">
+                            <i class="fas fa-car"></i>
+                        </div>
+                        <div>
+                            <h3 class="announcement-card-title">Araç Buluşması</h3>
+                            <span class="announcement-card-date"><i class="far fa-calendar"></i> 2026 · KELEŞ
+                                Varlığı</span>
+                        </div>
+                    </div>
+                    <p class="announcement-card-text">
+                        KELEŞ üyeleri, modifiyeli araçlarıyla etkileyici bir buluşma gerçekleştirdi.
+                        Modifiye kültürü ve güç bir arada!
+                    </p>
+                    <div class="announcement-card-img-wrap">
+                        <img src="İmages/img34_arac_gece.png" alt="Araç Buluşması" class="announcement-card-img"
+                            onerror="this.style.display='none'">
+                    </div>
+                    <div class="announcement-tags">
+                        <span class="tag tag-red"><i class="fas fa-car"></i> Araç</span>
+                        <span class="tag tag-gold"><i class="fas fa-star"></i> Aktivite</span>
+                    </div>
+                </div>
+
+                <!-- Jersey / Forma -->
+                <div class="announcement-card card">
+                    <div class="announcement-card-header">
+                        <div class="announcement-card-icon party">
+                            <i class="fas fa-tshirt"></i>
+                        </div>
+                        <div>
+                            <h3 class="announcement-card-title">Yeni KELEŞ Forma!</h3>
+                            <span class="announcement-card-date"><i class="far fa-calendar"></i> 2026 · FiveM</span>
+                        </div>
+                    </div>
+                    <p class="announcement-card-text">
+                        KELEŞ ailesinin yeni özel formaları hazır! Kırmızı-siyah #YIKILMAZKALE
+                        forması ile sahalarda fark yaratıyoruz.
+                    </p>
+                    <div class="announcement-card-img-wrap">
+                        <img src="İmages/img29_toplanti.jpg" alt="KELEŞ Forma" class="announcement-card-img"
+                            onerror="this.style.display='none'">
+                    </div>
+                    <div class="announcement-tags">
+                        <span class="tag tag-red"><i class="fas fa-fire"></i> Yeni</span>
+                        <span class="tag tag-blue"><i class="fas fa-tshirt"></i> Forma</span>
+                    </div>
+                </div>
+
+                <!-- WELLSO Team -->
+                <div class="announcement-card card">
+                    <div class="announcement-card-header">
+                        <div class="announcement-card-icon action">
+                            <i class="fas fa-skull-crossbones"></i>
+                        </div>
+                        <div>
+                            <h3 class="announcement-card-title">KELEŞ x WELLSO — Her Yerde!</h3>
+                            <span class="announcement-card-date"><i class="far fa-calendar"></i> 2026 · Gün Gün
+                                Ekibi</span>
+                        </div>
+                    </div>
+                    <p class="announcement-card-text">
+                        KELEŞ ve WELLSO ailesi, sokakta, pistte, her alanda birlikte.
+                        Gün gün büyüyoruz — <strong>heryerdeyiz, heryerdeyiz!</strong>
+                        Bizi durdurmak mümkün değil.
+                    </p>
+                    <div class="announcement-card-img-wrap">
+                        <img src="İmages/img32_wellso.png" alt="WELLSO Operasyon" class="announcement-card-img"
+                            onerror="this.style.display='none'">
+                    </div>
+                    <div class="announcement-tags">
+                        <span class="tag tag-red"><i class="fas fa-crosshairs"></i> Operasyon</span>
+                        <span class="tag tag-gold"><i class="fas fa-trophy"></i> Zafer</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rules Section -->
+    <section id="rules" class="section rules">
+        <div class="container">
+            <h2 class="section-title">Aile Kuralları</h2>
+            <p class="section-subtitle">KELEŞ ailesinin temel ilkeleri ve kuralları</p>
+            <div class="rules-grid">
+                <div class="rule-item card">
+                    <div class="rule-number">01</div>
+                    <div class="rule-icon"><i class="fas fa-heart"></i></div>
+                    <h3>Sadakat</h3>
+                    <p>Aileye her koşulda sadık kal. KELEŞ bayrağını yüksek tut, asla terk etme.</p>
+                </div>
+                <div class="rule-item card">
+                    <div class="rule-number">02</div>
+                    <div class="rule-icon"><i class="fas fa-shield-alt"></i></div>
+                    <h3>Saygı</h3>
+                    <p>Aile içinde ve dışında saygılı ol. Her üyeye kardeş gibi davran.</p>
+                </div>
+                <div class="rule-item card">
+                    <div class="rule-number">03</div>
+                    <div class="rule-icon"><i class="fas fa-user-secret"></i></div>
+                    <h3>Gizlilik</h3>
+                    <p>Aile sırları dışarı çıkmaz. Operasyon bilgileri yalnızca ailede kalır.</p>
+                </div>
+                <div class="rule-item card">
+                    <div class="rule-number">04</div>
+                    <div class="rule-icon"><i class="fas fa-fist-raised"></i></div>
+                    <h3>Dayanışma</h3>
+                    <p>Bir kardeş tehlikedeyse hepimiz oradayız. Kimseyi geride bırakmayız.</p>
+                </div>
+                <div class="rule-item card">
+                    <div class="rule-number">05</div>
+                    <div class="rule-icon"><i class="fas fa-crown"></i></div>
+                    <h3>Liderliğe Saygı</h3>
+                    <p>Lider ve yönetim kararlarına uy. Hiyerarşiye saygı esastır.</p>
+                </div>
+                <div class="rule-item card">
+                    <div class="rule-number">06</div>
+                    <div class="rule-icon"><i class="fas fa-ban"></i></div>
+                    <h3>İhan Yok</h3>
+                    <p>Düşmanla işbirliği, ihbar veya ihanet kesinlikle yasaktır. Cezası ağırdır.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="section team">
+        <div class="container">
+            <h2 class="section-title">Yönetim Kadrosu</h2>
+            <p class="section-subtitle">KELEŞ ailesini yöneten güçlü liderler</p>
+
+            <!-- Liderler -->
+            <div class="team-category">
+                <div class="team-category-label">
+                    <i class="fas fa-crown"></i> Liderler
+                </div>
+                <div class="team-grid">
+                    <div class="team-card card">
+                        <div class="rank-badge owner">LİDER</div>
+                        <div class="team-avatar">
+                            <i class="fas fa-user-shield"></i>
+                        </div>
+                        <h3><a href="https://discord.com/users/1006943363108450354" target="_blank"
+                                class="member-link">Lawz</a></h3>
+                        <p>Aile Lideri</p>
+                        <div class="team-card-footer">
+                            <a href="https://discord.com/users/1006943363108450354" target="_blank"
+                                class="team-discord-btn">
+                                <i class="fab fa-discord"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="team-card card">
+                        <div class="rank-badge owner">LİDER</div>
+                        <div class="team-avatar">
+                            <i class="fas fa-user-shield"></i>
+                        </div>
+                        <h3><a href="https://discord.com/users/987469147283800094" target="_blank"
+                                class="member-link">Volkan</a></h3>
+                        <p>Aile Lideri</p>
+                        <div class="team-card-footer">
+                            <a href="https://discord.com/users/987469147283800094" target="_blank"
+                                class="team-discord-btn">
+                                <i class="fab fa-discord"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Yardımcı Liderler -->
+            <div class="team-category">
+                <div class="team-category-label">
+                    <i class="fas fa-star"></i> Yardımcı Liderler
+                </div>
+                <div class="team-grid">
+                    <div class="team-card card">
+                        <div class="rank-badge admin">YARDIMCI LİDER</div>
+                        <div class="team-avatar">
+                            <i class="fas fa-user-crown"></i>
+                        </div>
+                        <h3><a href="https://discord.com/users/934863687020322836" target="_blank"
+                                class="member-link">Cane</a></h3>
+                        <p>Y. Lider</p>
+                        <div class="team-card-footer">
+                            <a href="https://discord.com/users/934863687020322836" target="_blank"
+                                class="team-discord-btn">
+                                <i class="fab fa-discord"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="team-card card">
+                        <div class="rank-badge admin">YARDIMCI LİDER</div>
+                        <div class="team-avatar">
+                            <i class="fas fa-user-crown"></i>
+                        </div>
+                        <h3><a href="https://discord.com/users/817376404261044244" target="_blank"
+                                class="member-link">Eros</a></h3>
+                        <p>Y. Lider</p>
+                        <div class="team-card-footer">
+                            <a href="https://discord.com/users/817376404261044244" target="_blank"
+                                class="team-discord-btn">
+                                <i class="fab fa-discord"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Vekiller -->
+            <div class="team-category">
+                <div class="team-category-label">
+                    <i class="fas fa-shield-alt"></i> Vekiller
+                </div>
+                <div class="team-grid">
+                    <div class="team-card card">
+                        <div class="rank-badge mod">VEKİL</div>
+                        <div class="team-avatar"><i class="fas fa-user-graduate"></i></div>
+                        <h3><a href="https://discord.com/users/774563645619306508" target="_blank"
+                                class="member-link">BORA</a></h3>
+                        <p>Vekil</p>
+                        <div class="team-card-footer">
+                            <a href="https://discord.com/users/774563645619306508" target="_blank"
+                                class="team-discord-btn">
+                                <i class="fab fa-discord"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="team-card card">
+                        <div class="rank-badge mod">VEKİL</div>
+                        <div class="team-avatar"><i class="fas fa-user-graduate"></i></div>
+                        <h3><a href="https://discord.com/users/673891911546699786" target="_blank"
+                                class="member-link">APO</a></h3>
+                        <p>Vekil</p>
+                        <div class="team-card-footer">
+                            <a href="https://discord.com/users/673891911546699786" target="_blank"
+                                class="team-discord-btn">
+                                <i class="fab fa-discord"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="team-card card">
+                        <div class="rank-badge mod">VEKİL</div>
+                        <div class="team-avatar"><i class="fas fa-user-graduate"></i></div>
+                        <h3><a href="https://discord.com/users/1362517995418681701" target="_blank"
+                                class="member-link">Orkun</a></h3>
+                        <p>Vekil</p>
+                        <div class="team-card-footer">
+                            <a href="https://discord.com/users/1362517995418681701" target="_blank"
+                                class="team-discord-btn">
+                                <i class="fab fa-discord"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Kıdemli Üyeler -->
+            <div class="team-category">
+                <div class="team-category-label">
+                    <i class="fas fa-medal"></i> Kıdemli Üyeler
+                </div>
+                <div class="team-grid">
+                    <div class="team-card card">
+                        <div class="rank-badge member">KIDEMLİ ÜYE</div>
+                        <div class="team-avatar"><i class="fas fa-user-tie"></i></div>
+                        <h3><a href="https://discord.com/users/1068261161977511996" target="_blank"
+                                class="member-link">Uğur</a></h3>
+                        <p>Kıdemli</p>
+                        <div class="team-card-footer">
+                            <a href="https://discord.com/users/1068261161977511996" target="_blank"
+                                class="team-discord-btn">
+                                <i class="fab fa-discord"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="team-card card">
+                        <div class="rank-badge member">KIDEMLİ ÜYE</div>
+                        <div class="team-avatar"><i class="fas fa-user-tie"></i></div>
+                        <h3><a href="https://discord.com/users/747874241348894850" target="_blank"
+                                class="member-link">Efe Keleş</a></h3>
+                        <p>Kıdemli</p>
+                        <div class="team-card-footer">
+                            <a href="https://discord.com/users/747874241348894850" target="_blank"
+                                class="team-discord-btn">
+                                <i class="fab fa-discord"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="team-card card">
+                        <div class="rank-badge member">KIDEMLİ ÜYE</div>
+                        <div class="team-avatar"><i class="fas fa-user-tie"></i></div>
+                        <h3><a href="https://discord.com/users/1407434093100142684" target="_blank"
+                                class="member-link">Berke Diff</a></h3>
+                        <p>Kıdemli</p>
+                        <div class="team-card-footer">
+                            <a href="https://discord.com/users/1407434093100142684" target="_blank"
+                                class="team-discord-btn">
+                                <i class="fab fa-discord"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="team-card card">
+                        <div class="rank-badge member">KIDEMLİ ÜYE</div>
+                        <div class="team-avatar"><i class="fas fa-user-tie"></i></div>
+                        <h3><a href="https://discord.com/users/758427280359161957" target="_blank"
+                                class="member-link">Furkan</a></h3>
+                        <p>Kıdemli</p>
+                        <div class="team-card-footer">
+                            <a href="https://discord.com/users/758427280359161957" target="_blank"
+                                class="team-discord-btn">
+                                <i class="fab fa-discord"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Discord Section -->
+    <section id="discord" class="section discord">
+        <div class="container">
+            <h2 class="section-title">Discord Sunucularımız</h2>
+            <p class="section-subtitle">Topluluğumuza katıl, ailenin bir parçası ol</p>
+            <div class="discord-grid">
+                <!-- Main Discord -->
+                <div class="discord-card card featured">
+                    <div class="discord-card-glow"></div>
+                    <div class="discord-icon">
+                        <i class="fab fa-discord"></i>
+                    </div>
+                    <div class="discord-badge">ANA SUNUCU</div>
+                    <h3>KELEŞ Ailesi</h3>
+                    <p>Ana sunucumuza katıl, ekibimizle tanış ve ailenin bir parçası ol.</p>
+                    <div class="discord-features">
+                        <span><i class="fas fa-check"></i> Özel Kanallar</span>
+                        <span><i class="fas fa-check"></i> Etkinlikler</span>
+                        <span><i class="fas fa-check"></i> Duyurular</span>
+                    </div>
+                    <a href="https://discord.gg/kelesfamily" target="_blank" class="btn btn-primary mt-2">
+                        <i class="fab fa-discord"></i> Aileye Katıl
+                    </a>
+                </div>
+
+                <!-- Mods Discord -->
+                <div class="discord-card card">
+                    <div class="discord-icon mod-icon">
+                        <i class="fas fa-file-archive"></i>
+                    </div>
+                    <div class="discord-badge mod-badge">MOD SUNUCU</div>
+                    <h3>FiveM Mods</h3>
+                    <p>Özel grafik paketleri, silah skinleri ve mod arşivimize ulaş.</p>
+                    <div class="discord-features">
+                        <span><i class="fas fa-check"></i> Grafik Paketleri</span>
+                        <span><i class="fas fa-check"></i> Silah Skinleri</span>
+                        <span><i class="fas fa-check"></i> Mod Arşivi</span>
+                    </div>
+                    <a href="https://discord.gg/XFtGhcBEhx" target="_blank" class="btn btn-secondary mt-2">
+                        <i class="fab fa-discord"></i> Mod Sunucusu
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="section gallery">
+        <div class="container">
+            <h2 class="section-title">Galeri</h2>
+            <p class="section-subtitle">KELEŞ ailesinin unutulmaz anları</p>
+
+            <div class="gallery-filter">
+                <button class="filter-btn active" data-filter="all">Tümü</button>
+                <button class="filter-btn" data-filter="announcement">Duyurular</button>
+                <button class="filter-btn" data-filter="group">Grup</button>
+                <button class="filter-btn" data-filter="action">Aksiyon</button>
+                <button class="filter-btn" data-filter="event">Etkinlik</button>
+            </div>
+
+            <div class="gallery-grid">
+                <!-- YENİ EKLENEN GÖRSELLER (28-32) -->
+                <div class="gallery-item gallery-large" data-category="announcement">
+                    <img src="İmages/img28_banner.png" alt="KAZANAN KELEŞ Banner" loading="lazy">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-expand"></i>
+                        <span class="gallery-label">KAZANAN KELEŞ!</span>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="group">
+                    <img src="İmages/img29_toplanti.jpg" alt="KELEŞ Ekip Toplantısı" loading="lazy">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-expand"></i>
+                        <span class="gallery-label">Ekip Toplantısı</span>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="event">
+                    <img src="İmages/img30_arac.jpg" alt="KELEŞ Araç Buluşması" loading="lazy">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-expand"></i>
+                        <span class="gallery-label">Araç Buluşması</span>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="group">
+                    <img src="İmages/img31_forma.png" alt="KELEŞ Forma" loading="lazy">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-expand"></i>
+                        <span class="gallery-label">KELEŞ Forma</span>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="action">
+                    <img src="İmages/img32_wellso.png" alt="WELLSO Operasyon" loading="lazy">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-expand"></i>
+                        <span class="gallery-label">WELLSO Operasyon</span>
+                    </div>
+                </div>
+
+                <!-- Öne Çıkarılanlar -->
+                <div class="gallery-item" data-category="announcement">
+                    <img src="İmages/image23.png" alt="KELEŞ Foto 23" loading="lazy">
+                    <div class="gallery-overlay"><i class="fas fa-expand"></i><span class="gallery-label">Duyuru</span>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="announcement">
+                    <img src="İmages/image22.png" alt="KELEŞ Foto 22" loading="lazy">
+                    <div class="gallery-overlay"><i class="fas fa-expand"></i><span class="gallery-label">Duyuru</span>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="announcement">
+                    <img src="İmages/image21.png" alt="KELEŞ Foto 21" loading="lazy">
+                    <div class="gallery-overlay"><i class="fas fa-expand"></i><span class="gallery-label">Duyuru</span>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="announcement">
+                    <img src="İmages/img20.png" alt="KELEŞ Foto 20" loading="lazy">
+                    <div class="gallery-overlay"><i class="fas fa-expand"></i><span class="gallery-label">Duyuru</span>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="announcement">
+                    <img src="İmages/img19.png" alt="KELEŞ Foto 19" loading="lazy">
+                    <div class="gallery-overlay"><i class="fas fa-expand"></i><span class="gallery-label">Duyuru</span>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="announcement">
+                    <img src="İmages/image18.png" alt="KELEŞ Foto 18" loading="lazy">
+                    <div class="gallery-overlay"><i class="fas fa-expand"></i><span class="gallery-label">Duyuru</span>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="announcement">
+                    <img src="İmages/image17.png" alt="KELEŞ Foto 17" loading="lazy">
+                    <div class="gallery-overlay"><i class="fas fa-expand"></i><span class="gallery-label">Duyuru</span>
+                    </div>
+                </div>
+
+                <!-- img33-img34 (yeni ekip/araç görselleri) -->
+                <div class="gallery-item" data-category="group">
+                    <img src="İmages/img33_ekip_toplanti.jpg" alt="KELEŞ WELLSO Ekip" loading="lazy">
+                    <div class="gallery-overlay"><i class="fas fa-expand"></i><span class="gallery-label">KELEŞ WELLSO
+                            Ekip</span></div>
+                </div>
+                <div class="gallery-item" data-category="event">
+                    <img src="İmages/img34_arac_gece.png" alt="KELEŞ Gece Buluşması" loading="lazy">
+                    <div class="gallery-overlay"><i class="fas fa-expand"></i><span class="gallery-label">Gece
+                            Buluşması</span></div>
+                </div>
+                <div class="gallery-item" data-category="group">
+                    <img src="İmages/img31_forma.png" alt="KELEŞ Forma" loading="lazy">
+                    <div class="gallery-overlay"><i class="fas fa-expand"></i><span class="gallery-label">KELEŞ
+                            Forma</span></div>
+                </div>
+                <div class="gallery-item" data-category="action">
+                    <img src="İmages/img30_arac.jpg" alt="KELEŞ Araç Buluşması" loading="lazy">
+                    <div class="gallery-overlay"><i class="fas fa-expand"></i><span class="gallery-label">Araç
+                            Buluşması</span></div>
+                </div>
+
+                <!-- Yeni Eklenenler -->
+                <div class="gallery-item" data-category="event">
+                    <img src="İmages/yarsma.png" alt="KELEŞ Yarışma" loading="lazy">
+                    <div class="gallery-overlay"><i class="fas fa-expand"></i><span class="gallery-label">Yarışma</span>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="group">
+                    <img src="İmages/535353636.png" alt="KELEŞ Fotoğraf" loading="lazy">
+                    <div class="gallery-overlay"><i class="fas fa-expand"></i><span class="gallery-label">Grup
+                            Foto</span></div>
+                </div>
+                <div class="gallery-item" data-category="group">
+                    <img src="İmages/ChatGPT_Image_12_Sub_2026_13_53_43.png" alt="KELEŞ AI Görsel" loading="lazy">
+                    <div class="gallery-overlay"><i class="fas fa-expand"></i><span class="gallery-label">KELEŞ</span>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="group">
+                    <img src="İmages/image3.png" alt="KELEŞ Görsel 3" loading="lazy">
+                    <div class="gallery-overlay"><i class="fas fa-expand"></i><span class="gallery-label">Grup</span>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="group">
+                    <img src="İmages/about_team.png" alt="KELEŞ Ekip Hakkında" loading="lazy">
+                    <div class="gallery-overlay"><i class="fas fa-expand"></i><span class="gallery-label">Ekip</span>
+                    </div>
+                </div>
+
+                <!-- Mevcut Galeri -->
+                <div class="gallery-item" data-category="group">
+                    <img src="İmages/uploaded_media_0_1769771314069.png" alt="KELEŞ Duyuru 1" loading="lazy">
+                    <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
+                </div>
+                <div class="gallery-item" data-category="announcement">
+                    <img src="İmages/uploaded_media_1_1769771314069.png" alt="KELEŞ Duyuru 2" loading="lazy">
+                    <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
+                </div>
+                <div class="gallery-item" data-category="announcement">
+                    <img src="İmages/uploaded_media_2_1769771314069.png" alt="KELEŞ Duyuru 3" loading="lazy">
+                    <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
+                </div>
+                <div class="gallery-item" data-category="announcement">
+                    <img src="İmages/uploaded_media_3_1769771314069.png" alt="KELEŞ Duyuru 4" loading="lazy">
+                    <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
+                </div>
+                <div class="gallery-item" data-category="announcement">
+                    <img src="İmages/uploaded_media_4_1769771314069.png" alt="KELEŞ Duyuru 5" loading="lazy">
+                    <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
+                </div>
+                <div class="gallery-item" data-category="announcement">
+                    <img src="İmages/uploaded_media_1_1769771277508.png" alt="KELEŞ Duyuru 6" loading="lazy">
+                    <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
+                </div>
+                <div class="gallery-item" data-category="group">
+                    <img src="İmages/uploaded_media_4_1769771277508.png" alt="KELEŞ Foto" loading="lazy">
+                    <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
+                </div>
+                <div class="gallery-item" data-category="group">
+                    <img src="İmages/uploaded_media_0_1769771277508.jpg" alt="KELEŞ Ekip Toplantısı" loading="lazy">
+                    <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
+                </div>
+                <div class="gallery-item" data-category="event">
+                    <img src="İmages/uploaded_media_2_1769771277508.jpg" alt="KELEŞ Araç" loading="lazy">
+                    <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
+                </div>
+                <div class="gallery-item" data-category="group">
+                    <img src="İmages/uploaded_media_3_1769771277508.jpg" alt="KELEŞ Üyeler" loading="lazy">
+                    <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
+                </div>
+
+                <!-- Klasik Galeri -->
+                <div class="gallery-item" data-category="group">
+                    <img src="İmages/img1.jpg" alt="KELEŞ Foto 1" loading="lazy">
+                    <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
+                </div>
+                <div class="gallery-item" data-category="group">
+                    <img src="İmages/img2.png" alt="KELEŞ Foto 2" loading="lazy">
+                    <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
+                </div>
+                <div class="gallery-item" data-category="group">
+                    <img src="İmages/img3.png" alt="KELEŞ Foto 3" loading="lazy">
+                    <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
+                </div>
+                <div class="gallery-item" data-category="action">
+                    <img src="İmages/img4.png" alt="KELEŞ Foto 4" loading="lazy">
+                    <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
+                </div>
+                <div class="gallery-item" data-category="group">
+                    <img src="İmages/img5.jpg" alt="KELEŞ Foto 5" loading="lazy">
+                    <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
+                </div>
+                <div class="gallery-item" data-category="group">
+                    <img src="İmages/img6.jpg" alt="KELEŞ Foto 6" loading="lazy">
+                    <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
+                </div>
+                <div class="gallery-item" data-category="group">
+                    <img src="İmages/img7.jpg" alt="KELEŞ Foto 7" loading="lazy">
+                    <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
+                </div>
+                <div class="gallery-item" data-category="action">
+                    <img src="İmages/img8.jpg" alt="KELEŞ Foto 8" loading="lazy">
+                    <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
+                </div>
+                <div class="gallery-item" data-category="group">
+                    <img src="İmages/img9.jpg" alt="KELEŞ Foto 9" loading="lazy">
+                    <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
+                </div>
+                <div class="gallery-item" data-category="group">
+                    <img src="İmages/img10.png" alt="KELEŞ Foto 10" loading="lazy">
+                    <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
+                </div>
+                <div class="gallery-item" data-category="group">
+                    <img src="İmages/img11.png" alt="KELEŞ Foto 11" loading="lazy">
+                    <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
+                </div>
+                <div class="gallery-item" data-category="group">
+                    <img src="İmages/img12.jpg" alt="KELEŞ Foto 12" loading="lazy">
+                    <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
+                </div>
+                <div class="gallery-item" data-category="group">
+                    <img src="İmages/img13.png" alt="KELEŞ Foto 13" loading="lazy">
+                    <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
+                </div>
+                <div class="gallery-item" data-category="group">
+                    <img src="İmages/img14.png" alt="KELEŞ Foto 14" loading="lazy">
+                    <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
+                </div>
+                <div class="gallery-item" data-category="group">
+                    <img src="İmages/img15.png" alt="KELEŞ Foto 15" loading="lazy">
+                    <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
+                </div>
+                <div class="gallery-item" data-category="group">
+                    <img src="İmages/img16.png" alt="KELEŞ Foto 16" loading="lazy">
+                    <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
+                </div>
+                <div class="gallery-item" data-category="group">
+                    <img src="İmages/img17.png" alt="KELEŞ Foto 17 HQ" loading="lazy">
+                    <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
+                </div>
+                <div class="gallery-item" data-category="group">
+                    <img src="İmages/img18.png" alt="KELEŞ Foto 18 HQ" loading="lazy">
+                    <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
+                </div>
+                <div class="gallery-item" data-category="group">
+                    <img src="İmages/img21.png" alt="KELEŞ Foto 21 HQ" loading="lazy">
+                    <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
+                </div>
+                <div class="gallery-item" data-category="group">
+                    <img src="İmages/img22.png" alt="KELEŞ Foto 22 HQ" loading="lazy">
+                    <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- App Download Section -->
+    <section id="download" class="section download">
+        <div class="container">
+            <div class="download-content card">
+                <div class="download-icon-wrap">
+                    <div class="download-icon">
+                        <i class="fas fa-desktop"></i>
+                    </div>
+                </div>
+                <div class="download-text">
+                    <div class="download-version-badge">v1.0 · YENİ</div>
+                    <h2>KELEŞ Masaüstü Uygulaması</h2>
+                    <p>Galeriye, modlara ve duyurulara tek tıkla erişin. Özel "Mods Klasörü" özelliği ile dosyalarınızı
+                        kolayca yönetin.</p>
+                    <div class="download-features">
+                        <span><i class="fas fa-check-circle"></i> Windows 10/11 Uyumlu</span>
+                        <span><i class="fas fa-check-circle"></i> Portable Sürüm</span>
+                        <span><i class="fas fa-check-circle"></i> Ücretsiz</span>
+                    </div>
+                </div>
+                <div class="download-action">
+                    <a href="downloads/KELES-App.exe" class="btn btn-primary btn-large" download>
+                        <i class="fas fa-download"></i> İNDİR (v1.0)
+                    </a>
+                    <p class="mt-1" style="font-size: 0.8rem; opacity: 0.6;">Güvenli · Virüssüz · Portable</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <img src="keles_logo_new.png" alt="KELEŞ" class="footer-logo">
+                <h3 class="text-gradient">KELEŞ</h3>
+                <p>FiveM'in En Güçlü Ailesi</p>
+
+                <div class="social-links">
+                    <a href="https://discord.gg/kelesfamily" target="_blank" class="social-link" title="Discord">
+                        <i class="fab fa-discord"></i>
+                    </a>
+                    <a href="#" class="social-link" title="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="social-link" title="YouTube">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                    <a href="#" class="social-link" title="TikTok">
+                        <i class="fab fa-tiktok"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-divider"></div>
+
+            <p class="footer-text">
+                &copy; 2026 KELEŞ Team. Tüm hakları saklıdır. &nbsp;|&nbsp;
+                <a href="https://discord.gg/kelesfamily" target="_blank"
+                    style="color: var(--color-primary); text-decoration: none;">Discord</a>
+            </p>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top" title="Yukarı Çık">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Image Modal/Lightbox -->
+    <div class="modal" id="imageModal">
+        <div class="modal-backdrop" id="modalBackdrop"></div>
+        <div class="modal-content">
+            <button class="modal-close" id="modalClose"><i class="fas fa-times"></i></button>
+            <button class="modal-nav prev" id="modalPrev"><i class="fas fa-chevron-left"></i></button>
+            <img src="" alt="Gallery Image" id="modalImage">
+            <button class="modal-nav next" id="modalNext"><i class="fas fa-chevron-right"></i></button>
+            <div class="modal-footer">
+                <div class="modal-caption" id="modalCaption"></div>
+                <div class="modal-counter" id="modalCounter">1 / 1</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+
+</html>
